@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    {% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>BTechnacademy: Online IT Courses</title>
+    <meta name="description" content="BTechnacademy offers comprehensive online IT courses covering a wide range of topics, including digital marketing, graphic design, consulting services, and more." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}" />
+    <!-- Add more meta tags as needed -->
+
+    <!-- Additional SEO optimization -->
+    <meta name="keywords" content="BTechnacademy, IT courses online, digital marketing, graphic design, consulting services, IT training, online education" />
+    <meta name="author" content="BTechnacademy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    
+    <!-- Open Graph tags for better sharing on social media -->
+    <meta property="og:title" content="BTechnacademy: Online IT Courses" />
+    <meta property="og:description" content="BTechnacademy offers comprehensive online IT courses covering a wide range of topics, including digital marketing, graphic design, consulting services, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.btechnacademy.com/" />
+    <meta property="og:image" content="https://www.btechnacademy.com/assets/images/og-image.jpg" />
+    <meta property="og:site_name" content="BTechnacademy" />
+</head>
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/LineIcons.3.0.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/tiny-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/glightbox.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- /End Preloader -->
+
+{% block content %}{% endblock %}
+
+    <!-- Start Footer Area -->
+    <footer class="footer section" id="footer">
+        <!-- Start Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-about">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="{{company.logo_whitr.url}}" alt="#" width="100px" height="100%">
+                                    </a>
+                                </div>
+                                <p class="text-justify" style="text-align: justify;">{{company.description}}.
+                                </p>
+                                <h4 class="social-title">Follow Us On:</h4>
+                                <ul class="social">
+                                    <li><a href="{{company.facebook}}"><i class="lni lni-facebook-filled"></i></a></li>
+                                    <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+                                    <li><a href="{{company.linkedin}}"><i class="lni lni-linkedin-original"></i></a></li>
+                                    <li><a href="{{company.youtube}}"><i class="lni lni-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>Solutions</h3>
+                                <ul>
+                                    {% for service in services %}
+                                    <li><a href="javascript:void(0)">{{service.nom}}</a></li>
+                                    
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>Support</h3>
+                                <ul>
+                                    <li><a href="/affiliate">Become Affiliate</a></li>
+                                    <li><a href="https://wa.me/{{company.phone_number}}">Enquire course</a></li>
+                                    <li><a href="/#services">Our solutions</a></li>
+                                    <li><a href="{{company.youtube}}" target="true">Youtube Channel</a></li>
+                                    <li><a href="/#faq">FAQ</a></li>
+                                    <li><a href="/#">Others</a> </li>
+
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Single Widget -->
+                        
+                                    <div class="single-footer newsletter text-light p-2">
+                                        <h3>Contact</h3>
+                                        <ul class="contact-info text-light">
+                                            <li style="color: white;" class="p-1"><i class="lni lni-envelope p-2  text-light" style="color: white;"></i> <a href="mailto:{{company.email1}}" style="color: white;">{{company.email1}}</a></li>
+                                            <li style="color: white;" class="p-1"><i class="fa fa-globe p-2  text-light"></i> <a href="/" target="_blank" style="color: white;">www.btechnacademy.com</a></li>
+                                            <li style="color: white;" class="p-1"><i class="lni lni-phone p-2 "></i> <a href="tel:++1 (317) 682 8174" style="color: white;">{{company.phone_number}}</a></li>
+                                            <li style="color: white;" class="p-1"><i class="lni lni-phone p-2 "></i> <a href="tel:+2299077688" style="color: white;">+229 90 77 68 88</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+
+                            <!-- End Single Widget -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+        <!-- Start Copyright Area -->
+        <div class="copyright-area">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <p class="copyright-text">© 2019 - 2024 Btechnacademy - All Rights Reserved</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <p class="copyright-owner">Designed and Developed by <a href="/"
+                                    rel="nofollow" target="_blank">Btechnacademy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+    </footer>
+    <!--/ End Footer Area -->
+    <script src="//code.tidio.co/pb062khnufxvejhvfpe5kkzi8e9fdezk.js" async></script>
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/tiny-slider.js' %}"></script>
+    <script src="{% static 'assets/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/js/count-up.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script>
+
+        //========= testimonial 
+        tns({
+            container: '.testimonial-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 2,
+                },
+                1170: {
+                    items: 3,
+                }
+            }
+        });
+
+        //====== counter up 
+        var cu = new counterUp({
+            start: 0,
+            duration: 2000,
+            intvalues: true,
+            interval: 100,
+            append: " ",
+        });
+        cu.start();
+
+        //========= glightbox
+        GLightbox({
+            'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        });
+
+        //============== isotope masonry js with imagesloaded
+        imagesLoaded('#container', function () {
+            var elem = document.querySelector('.grid');
+            var iso = new Isotope(elem, {
+                // options
+                itemSelector: '.grid-item',
+                masonry: {
+                    // use outer width of grid-sizer for columnWidth
+                    columnWidth: '.grid-item'
+                }
+            });
+
+            let filterButtons = document.querySelectorAll('.portfolio-btn-wrapper button');
+            filterButtons.forEach(e =>
+                e.addEventListener('click', () => {
+
+                    let filterValue = event.target.getAttribute('data-filter');
+                    iso.arrange({
+                        filter: filterValue
+                    });
+                })
+            );
+        });
+
+    </script>
+</body>
+
+<script>
+(function () {
+    // Preloader
+    window.onload = function () {
+        window.setTimeout(fadeout, 500);
+    }
+
+    function fadeout() {
+        document.querySelector('.preloader').style.opacity = '0';
+        document.querySelector('.preloader').style.display = 'none';
+    }
+
+    // Sticky Navbar
+    window.onscroll = function () {
+        var headerNavbar = document.querySelector(".navbar-area");
+        var sticky = headerNavbar.offsetTop;
+
+        var logo = document.querySelector('.navbar-brand img');
+        if (window.pageYOffset > sticky) {
+            headerNavbar.classList.add("sticky");
+            logo.src = '{{company.logo.url}}'; // Use static file path for the logo
+        } else {
+            headerNavbar.classList.remove("sticky");
+            logo.src = '{{company.logo_whitr.url}}'; // Change back to original logo
+        }
+
+        // Show or hide the scroll-to-top button
+        var scrollToTopBtn = document.querySelector(".scroll-top");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            scrollToTopBtn.style.display = "flex";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Initialize WOW.js for animations
+    new WOW().init();
+
+    // Mobile menu toggle
+    let navbarToggler = document.querySelector(".mobile-menu-btn");
+    navbarToggler.addEventListener('click', function () {
+        navbarToggler.classList.toggle("active");
+    });
+
+    // Portfolio button active state
+    var elements = document.getElementsByClassName("portfolio-btn");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].onclick = function () {
+            // Remove class from sibling
+            var el = elements[0];
+            while (el) {
+                if (el.tagName === "BUTTON") {
+                    // Remove class
+                    el.classList.remove("active");
+                }
+                // Pass to the new sibling
+                el = el.nextSibling;
+            }
+            this.classList.add("active");
+        };
+    }
+})();
+</script>
+</html>
+

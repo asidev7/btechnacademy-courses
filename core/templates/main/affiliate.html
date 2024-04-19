@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+{% include 'main/header.html' %}
+
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Affiliate</h1>
+                        <ul class="breadcrumb-nav">
+                            <li><a href="/">Home</a></li>
+                            <li>Affiliate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+
+    
+
+    <!-- Start Contact Area -->
+    <div class="contact-us section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="contact-widget-wrapper">
+                        <div class="main-title">
+                            <h2>Invite your friends now</h2>
+                            
+                        </div>
+                        <div class="">
+                            <p>Spread the word about our courses to your friends and earn rewards! Refer your friends to our online courses by filling out the form below. When they enroll, you'll earn rewards as a thank you from us.</p>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="contact-form">
+                        <h3 class="form-title"> Affiliate Partner Form </h3>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.firstname }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.last_name }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.email }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.phone_number }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.Referrer_name }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.Referrer_email }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="form-group">
+                                        {{ form.Referrer_phone_number }}
+                                    </div>
+                                </div>
+                                
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        {{ form.country }}
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        {{ form.city }}
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        {{ form.zipcode }}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        {{ form.course_name }}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        {{ form.message }}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="button">
+                                        <button type="submit" class="btn">Submit </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Area -->
+
+
+{% endblock %}

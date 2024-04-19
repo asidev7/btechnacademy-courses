@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+{% include 'main/header.html' %}
+
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Enrollement</h1>
+                        <ul class="breadcrumb-nav">
+                            <li><a href="/">Home</a></li>
+                            <li>Enrollement </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+
+   <!-- Start Enroll Area -->
+<div class="enroll-section section" id="enroll">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="enroll-widget-wrapper">
+                    <div class="main-title">
+                        <h2>Enroll Now</h2>
+                    </div>
+                    <div class="">
+                        <p>Ready to take your skills to the next level? Enroll in our courses now and start your journey towards success!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="enroll-form">
+                    <h3 class="form-title">Enrollment Form</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="form-group p-2">
+                                    {{ form.first_name }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.last_name }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.phone_number }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.Select_Course_Certification_Exam }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.preferred_date_time }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.any_previous_experience_on_IT }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.Any_special_request_accommodations }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12 p-2">
+                                <div class="form-group">
+                                    {{ form.comments_question }}
+                                </div>
+                            </div>
+                            <div class="col-12 p-2">
+                                <div class="button">
+                                    <button type="submit" class="btn">Enroll Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Enroll Area -->
+
+
+{% endblock %}
